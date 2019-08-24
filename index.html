@@ -13,20 +13,24 @@
 <body>
     <div id = 'container'>
         <header id = "banner">
-        <img class="quizLogo" alt="logo-for-quiz" src="assets/images/einsteintongue.jpg">
-        <h1>World History Quiz</h1>
+        <img class="quizLogo" alt="logo-for-quiz" src="assets/images/logo.jpg">
+        <h1 class = "heading">World History Trivia</h1>
         <!-- This will be hidden when page loads and shown when start button is clicked -->
-        <p class ='gameStatus'>Question <span>1</span> out of <span>10</span></p>
+        <p id = "gameStatus">Question <span class ='questionNumber'>0</span> out of <span>10    <br>
+        </span>SCORE: <span class = "userScore">0</span></p>
         </header>
         <main>
-        <div class = "introMessage">Are you ready to learn some ridiculous historical facts that will blow your mind?</div>
-        <button type="button" class="startButton"><i class="far fa-play-circle"></i>START</button>
+        <div class = "introMessage intro">Want learn some ridiculous historical facts that will blow your mind?<br/>
+
+        <button type="button" class="startButton intro">YES!</button>
+        </div>
         <div class="generatedQuestion"></div>
         </main>
     </div>
 
 
-    <!-- <script type="text/javascript" src="assets/js/quiz.js"></script>   -->
+    <script type="text/javascript" src="assets/js/quiz.js"></script>  
+    <script type="text/javascript" src="assets/js/new.js"></script>  
     <script type="text/javascript" src="assets/js/questions.js"></script>  
 
 

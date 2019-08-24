@@ -14,7 +14,7 @@ const questions = [
       question: "Why wouldn't the founding fathers wouldn't let Benjamin Franklin work on the Declaration Of Independence ?",
       answers: [
         'Because they were afraid he would slip a joke into it',
-        'Becayse he was not educated',
+        'Because he was not educated',
         'He was a spy',
         'Because he was not a citizen'
         ],
@@ -31,7 +31,7 @@ const questions = [
         correctAnswer: 'Ice Cream',
     },
     {
-      question: "How did Emperor Barborsa die, the man hitler named a military invasion after, die?",
+      question: "How did Emperor Barborsa, the man hitler named a military invasion after, die?",
       answers: [
         'Died by being shot in the knee',
         'Drowned in waist-deep water',

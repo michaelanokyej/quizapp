@@ -1,7 +1,7 @@
 // Global variables
 let numberOfQuestions = $(questions).length;
-let displayedQuestionNumber = 0;
-let displayedScore = 0;
+let displayedQuestionNumber = parseInt($('.questionNumber').text());
+let displayedScore = parseInt($('.userScore').text());
 let pickedQuestion;
 
 function startGame(){
@@ -13,6 +13,10 @@ function startGame(){
         $('#gameStatus').css('display', 'block');
         $('.questionNumber').text(1);
     });
+}
+
+function questionCounter(){
+    displayedQuestionNumber++; 
 }
 
 function randomQuestion(){
@@ -29,7 +33,7 @@ function generateQuestion(){
     randomQuestion();
     $('div.generatedQuestion').html(`
     <div>
-    <form>
+    <form class = "questionForm">
     <fieldset>
     <legend>${pickedQuestion.question}</legend>
       
@@ -50,12 +54,62 @@ function generateQuestion(){
   </form>
   </div>`
   );
+} else{
+    renderResults();
+    restartQuiz();
+    return numberOfQuestions;
 }
 }
 
+function renderResults(){
+    if (displayedScore >= 8) {
+        $('div.generatedQuestion').html(`<div><h3>You're a master of history!</h3><img src="assets/images/scholar.png" alt="scholar image"/><p>You got ${displayedScore} / 10</p><p>You're ready to conquer the world!</p><button class="restartButton">Restart Quiz</button></div>`);
+      } else if (displayedScore < 8 && displayedScore >= 5) {
+        $('div.generatedQuestion').html(`<div><h3>You are almost a scholar!</h3><img src="assets/images/almostScholar.jpg" alt="almost scholar image"/><p>You got ${displayedScore} / 10</p><p>Brush up on your history if you want to conquer the world!</p><button class="restartButton">Restart Quiz</button></div>`);
+      } else {
+        $('div.generatedQuestion').html(`<div><h3>You are missing a lot of history!</h3><img src="assets/images/cryingEmoji" alt="crying emji"/><p>You got ${displayedScore} / 10</p><p>Try to study the world's history. I promise you will love it!</p><button class="restartButton">Restart Quiz</button></div>`);
+      }
+    }
+
+
+function restartQuiz(){
+    $('main').on('click', '.restartButton', function (event) {
+        createGame();
+      });
+}
+
+
+
+
 function checkAnswer(){
     // This function will check the user's choice 
+    $('.questionForm').on('submit', function (event) {
+        event.preventDefault();
+        let selected = $('input:checked');
+        let answer = selected.val();
+        let correctAnswer = `${pickedQuestion.correctAnswer}`;
+        if (answer === correctAnswer) {
+          selected.parent().addClass('correct');
+          correctAnswerSelected();
+        } else {
+          selected.parent().addClass('wrong');
+          wrongAnswerSelected();
+        }
+      });
+
 }
+
+function correctAnswerSelected () {
+    let correctAnswer = `${pickedQuestion.correctAnswer}`;
+    $('div.generatedQuestion').html(`<div><p><b>Correct! You are awesome!</b></p><button type=button class="nextButton">Next</button></div>`);
+  }
+
+function wrongAnswerSelected () {
+    let correctAnswer = `${pickedQuestion.correctAnswer}`;
+    $('.questionAnswerForm').html(`<div><p><b>Sorry, you are wrong.</b><br>the correct answer is <span>"${correctAnswer}"</span></p><button type=button class="nextButton">Next</button></div>`);
+  }
+
+
 
 function createGame(){
     // function to create the game as a whole

@@ -85,7 +85,8 @@ function renderResults(){
 
 function restartQuiz(){
     $('div.generatedQuestion').on('click', '.restartButton', function (event) {
-      startGame();
+      displayedQuestionNumber = 1;
+      $('.questionNumber').text(displayedQuestionNumber);
       generateQuestion();
       checkAnswer();
       });

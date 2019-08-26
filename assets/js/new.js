@@ -39,25 +39,33 @@ function generateQuestion(){
     // We check if game is still being played 
     if(displayedQuestionNumber < numberOfQuestions){
     randomQuestion();
-    // $('header.quizLogo').html(`<img class="quizLogo" alt="logo-for-quiz" src="assets/images/sacriledge.jpg">`);
+    // $('img.quizLogo').attr('src', pickedQuestion.icon);
     // // Working on the above to change pictures by question 
     $('div.generatedQuestion').html(`
     <div>
     <form class = "questionForm">
     <fieldset>
     <legend>${pickedQuestion.question}</legend>
-      
+    
+    <div class = "answer">
     <input type="radio" id="answerOption1" name="quiz" value= "${pickedQuestion.answers[0]}">
     <label for="answerOption1">${pickedQuestion.answers[0]}</label><br/>
+    </div>
 
+    <div class = "answer">
     <input type="radio" id="answerOption2" name="quiz" value= "${pickedQuestion.answers[1]}">
     <label for="answerOption2">${pickedQuestion.answers[1]}</label><br/>
+    </div>
 
+    <div class = "answer">
     <input type="radio" id="answerOption3" name="quiz" value= "${pickedQuestion.answers[2]}">
     <label for="answerOption3">${pickedQuestion.answers[2]}</label><br/>
+    </div>
 
+    <div class = "answer">
     <input type="radio" id="answerOption4" name="quiz" value= "${pickedQuestion.answers[3]}">
     <label  for="answerOption4">${pickedQuestion.answers[3]}</label><br/>
+    </div>
 
     <input class="submitAnswerButton" type="button" value="submit">
     </fieldset>

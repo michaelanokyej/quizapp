@@ -43,9 +43,11 @@ fieldset > input{
     padding: 20px 40px;
 }
 
-/* fieldset > label{
-    padding: 10px 20px;
-} */
+div.answer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .heading{
     position: absolute;

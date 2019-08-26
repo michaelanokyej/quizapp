@@ -19,13 +19,11 @@ function startGame(){
 function questionCounter(){
   displayedQuestionNumber++;
   $('.questionNumber').text(displayedQuestionNumber);
-  // console.log("displayedQuestionNumber", displayedQuestionNumber);
 }
 
 function scoreCounter(){
   score++;
   $('.userScore').text(score);
-
 }
 
 function randomQuestion(){
@@ -96,6 +94,7 @@ function restartQuiz(){
     $('div.generatedQuestion').on('click', '.restartButton', function (event) {
       displayedQuestionNumber = 1;
       $('.questionNumber').text(displayedQuestionNumber);
+      $('div #gameStatus').css('display', 'block');
       generateQuestion();
       checkAnswer();
       });

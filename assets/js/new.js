@@ -143,7 +143,6 @@ function wrongAnswerSelected () {
   function nextQuestion(){
     $('div.generatedQuestion').off('click', '.nextButton') 
     $('div.generatedQuestion').on('click', '.nextButton', function (event) {
-      // event.preventDefault();
       generateQuestion();
       questionCounter();
       

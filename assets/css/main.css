@@ -105,5 +105,9 @@ button:hover{
         font-weight: normal;
 }
 
-
+@media screen and (max-width: 568px) {
+    .quizLogo {
+        display: none;
+    }
+}
     

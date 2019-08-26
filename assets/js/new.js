@@ -102,9 +102,6 @@ function checkAnswer(){
         let selected = $('input:checked');
         let answer = selected.val();
         let correctAnswer = `${pickedQuestion.correctAnswer}`;
-        // console.log(correctAnswer);
-        // console.log(selected);
-        // console.log(answer);
        
         if (answer === correctAnswer) {
         //   selected.parent().addClass('correct');

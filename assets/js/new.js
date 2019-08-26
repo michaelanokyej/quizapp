@@ -32,8 +32,6 @@ function randomQuestion(){
     // This function generates random question number 
     let random = Math.floor(Math.random() * $(questions).length);
     pickedQuestion = questions[random];
-    // return pickedQuestion;
-    // console.log("random questions");
 }
 
 function generateQuestion(){
@@ -41,6 +39,8 @@ function generateQuestion(){
     // We check if game is still being played 
     if(displayedQuestionNumber < numberOfQuestions){
     randomQuestion();
+    // $('header.quizLogo').html(`<img class="quizLogo" alt="logo-for-quiz" src="assets/images/sacriledge.jpg">`);
+    // // Working on the above to change pictures by question 
     $('div.generatedQuestion').html(`
     <div>
     <form class = "questionForm">
@@ -73,6 +73,7 @@ console.log("generate question");
 }
 
 function renderResults(){
+  $('div #gameStatus').css('display', 'none');
     if (score >= 8) {
         $('div.generatedQuestion').html(`<div><h3>You're a master of history!</h3><img src="assets/images/scholar.png" alt="scholar image"/><p>You got ${score} / 10</p><p>You're ready to conquer the world!</p><button class="restartButton">Restart Quiz</button></div>`);
       } else if (score < 8 && score >= 5) {

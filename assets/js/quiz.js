@@ -9,6 +9,7 @@ const questions = [
         'It is illegal to have a parrrot at a funeral.'
         ],
       correctAnswer: 'Because the parrot was swearing.',
+      icon: 'assets/images/andrewjackson.jpg'
     },
     {
       question: "Why wouldn't the founding fathers wouldn't let Benjamin Franklin work on the Declaration Of Independence ?",
@@ -19,6 +20,7 @@ const questions = [
         'Because he was not a citizen'
         ],
         correctAnswer: 'Because they were afraid he would slip a joke into it',
+        icon: 'assets/images/Benjamin-Franklin.jpg'
     },
     {
       question: "What was Fidel Castro's favorite food?",
@@ -29,6 +31,7 @@ const questions = [
         'Sushi'
         ],
         correctAnswer: 'Ice Cream',
+        icon: 'assets/images/Castro.jpg'
     },
     {
       question: "How did Emperor Barborsa, the man hitler named a military invasion after, die?",
@@ -39,6 +42,7 @@ const questions = [
         'Died from a sparring accident'
         ],
         correctAnswer: 'Drowned in waist-deep water',
+        icon: 'assets/images/emperor.jpg'
     },
     {
         question: "What was urine medically used for in medieval times?",
@@ -49,6 +53,7 @@ const questions = [
           'As a wound cleaner'
           ],
           correctAnswer: 'As an antiseptic',
+          icon: 'assets/images/syringe.jpg'
       },
       {
         question: "What country banned soccer/football in 1314 due to mobb voilence?",
@@ -59,6 +64,7 @@ const questions = [
           'Denmark'
           ],
           correctAnswer: 'England',
+          icon: 'assets/images/football.jpg'
       },
       {
         question: "Which bird was once worshipped like a God by the people on the American continent?",
@@ -69,6 +75,7 @@ const questions = [
           'Crow'
           ],
           correctAnswer: 'Turkey',
+          icon: 'assets/images/worship.jpg'
       },
       {
         question: "Which conqueror was once defeated by a horde of bunnies?",
@@ -79,6 +86,7 @@ const questions = [
           'Julius Caesar'
           ],
           correctAnswer: 'Napoleon Bonaparte',
+          icon: 'assets/images/bunnies.jpg'
       },
       {
         question: "Which cutlery used to be seen as sacrilegious?",
@@ -89,6 +97,7 @@ const questions = [
           'The knife'
           ],
           correctAnswer: 'The fork',
+          icon: 'assets/images/sacriledge.jpg'
       },
       {
         question: "Why did Pope Gregory IV declare war on cats?",
@@ -99,5 +108,6 @@ const questions = [
           'A cat saw him naked'
           ],
           correctAnswer: 'He believed that cats were instruments of satan',
+          icon: 'assets/images/cats.jpg'
       },
 ]

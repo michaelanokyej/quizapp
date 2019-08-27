@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question Page</title>
+    <link href="wireframe.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div id = 'container'>
+        <header id = "banner">
+        <img class="quizLogo" alt="logo-for-quiz" src="logoImagePlaceholder.png">
+        <h1 class = "heading">World History Trivia</h1>
+        <!-- This will be hidden when page loads and shown when start button is clicked -->
+        <p id = "gameStatus">Question <span class ='questionNumber'>0</span> out of <span>10   <br>
+            </span>SCORE: <span class = "userScore">0</span></p>
+        </header>
+        <main>
+        <div>
+                <form class = "questionForm">
+                    <fieldset>
+                        <legend>A random question from question pool</legend>
+                          
+                        <input type="radio" id="answerOption1" name="quiz" value= "${pickedQuestion.answers[0]}">
+                        <label for="answerOption1">Answer option</label><br/>
+                    
+                        <input type="radio" id="answerOption2" name="quiz" value= "${pickedQuestion.answers[1]}">
+                        <label for="answerOption2">Answer option</label><br/>
+                    
+                        <input type="radio" id="answerOption3" name="quiz" value= "${pickedQuestion.answers[2]}">
+                        <label for="answerOption3">Answer option</label><br/>
+                    
+                        <input type="radio" id="answerOption4" name="quiz" value= "${pickedQuestion.answers[3]}">
+                        <label  for="answerOption4">Answer option</label><br/>
+                    
+                        <input class="submitAnswerButton" type="button" value="submit">
+                    </fieldset>
+                </form>
+        </div>
+        </main>
+    </div>
+
+</body>
+</html>
